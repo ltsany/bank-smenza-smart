@@ -1,0 +1,133 @@
+  body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+  }
+
+  h1 {
+      text-align: center;
+      color: #0b348c;
+      font-size: 24px;
+      margin-bottom: 30px;
+  }
+
+  /* Info Box */
+  .info-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: #0b348c;
+      color: white;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      overflow: hidden;
+  }
+
+  .info-item {
+      padding: 16px 24px;
+      font-size: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .info-item:last-child,
+  .info-item:nth-child(2) {
+      border-right: none;
+  }
+
+  /* Table  */
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 14px;
+  }
+
+  thead {
+      background-color: #0b348c;
+      color: white;
+  }
+
+  th,
+  td {
+      padding: 10px 12px;
+      text-align: center;
+      border-bottom: 1px solid #e2e8f0;
+  }
+
+  tbody tr:nth-child(even) {
+      background-color: #eafaf1;
+  }
+
+  tbody tr:nth-child(odd) {
+      background-color: #f1faf7;
+  }
+
+  .amount {
+      color: #f59e0b;
+      font-weight: 600;
+  }
+
+  h2 {
+      text-align: center;
+      color: #111;
+      margin: 30px 0 10px;
+      font-size: 18px;
+  }
+
+  /* Tombol Cetak */
+.print-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 22px;
+    background-color: #0b348c;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.print-btn:hover {
+    background-color: #102f70;
+    transform: scale(1.03);
+}
+
+/* Print Mode  */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .print-btn {
+        display: none;
+    }
+
+    table,
+    .info-box {
+        page-break-inside: avoid;
+    }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .info-box {
+        grid-template-columns: 1fr;
+    }
+
+    th,
+    td {
+        font-size: 13px;
+        padding: 8px;
+    }
+}

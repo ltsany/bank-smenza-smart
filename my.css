@@ -1,0 +1,113 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f6f9ff;
+    margin: 0;
+    padding: 60px 0;
+    color: #333;
+}
+
+.mysaving {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 40px 60px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #0b348c;
+    margin-bottom: 24px;
+}
+
+/* User bar */
+.user-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    background: #f2f4ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #0b348c;
+}
+
+.user-info i {
+    margin-right: 8px;
+}
+
+.sort-option {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 8px 12px;
+    background: #f9fafc;
+    font-weight: 500;
+    color: #0b348c;
+}
+
+/* Tabel */
+.saving-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th {
+    background: #0b348c;
+    color: #fff;
+    padding: 12px;
+    font-size: 15px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e7ff;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fbff;
+}
+
+tr:hover {
+    background-color: #eef3ff;
+    transition: 0.2s;
+}
+
+/* Total saldo */
+.total {
+    background: #f2f8ff;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0b348c;
+}
+
+@media (max-width: 600px) {
+    .mysaving {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .user-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sort-option {
+        width: 100%;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page | Bank Smenza Smart</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Login Admin</h1>
+                <span>Isi semua data dengan benar.</span>
+                <input type="text" placeholder="Nama">
+                <input type="email" placeholder="NIP">
+                <input type="password" placeholder="Password">
+                <button type="button" onclick="window.location.href='dashad.html'">Sign in</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Login Siswa</h1>
+                <span>Isi semua data dengan benar.</span>
+                <input type="text" placeholder="NIS">
+                <input type="password" placeholder="Password">
+                <a href="help.html">Lupa Password?</a>
+                <button type="button" onclick="window.location.href='dashst.html'">Login</button>
+
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Halo, Admin!</h1>
+                    <p>Portal Admin Bank Smenza Smart.
+                    Login untuk memantau data siswa, transaksi, dan laporan keuangan sekolah</p>
+                    <button class="hidden" id="login">Siswa</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Selamat Datang!</h1>
+                    <p>Have a good day and happy saving!</p>
+                    <button class="hidden" id="register">Admin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="logscript.js"></script>
+</body>
+
+</html>

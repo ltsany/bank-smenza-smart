@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kelola Akun Siswa - BSS</title>
+    <link rel="stylesheet" href="kelolasty.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kelola Akun Siswa</h1>
+        <p class="subtitle">Pantau dan atur data tabungan siswa secara real-time. (PPLG, DKV, AKL, PMS, MPLB)</p>
+
+        <!-- Filter + Search -->
+        <div class="filter-search">
+            <div class="filter-left">
+                <label for="filterKelas">Filter Kelas:</label>
+                <select id="filterKelas">
+                    <option value="all">Semua Kelas</option>
+
+                    <optgroup label="PPLG">
+                        <option value="X PPLG 1">X PPLG 1</option>
+                        <option value="X PPLG 2">X PPLG 2</option>
+                        <option value="XI PPLG 1">XI PPLG 1</option>
+                        <option value="XI PPLG 2">XI PPLG 2</option>
+                        <option value="XII PPLG 1">XII PPLG 1</option>
+                        <option value="XII PPLG 2">XII PPLG 2</option>
+                    </optgroup>
+
+                    <optgroup label="DKV">
+                        <option value="X DKV 1">X DKV 1</option>
+                        <option value="X DKV 2">X DKV 2</option>
+                        <option value="XI DKV 1">XI DKV 1</option>
+                        <option value="XI DKV 2">XI DKV 2</option>
+                        <option value="XI DKV 3">XI DKV 3</option>
+                        <option value="XII DKV 1">XII DKV 1</option>
+                        <option value="XII DKV 2">XII DKV 2</option>
+                    </optgroup>
+
+                    <optgroup label="AKL">
+                        <option value="X AKL 1">X AKL 1</option>
+                        <option value="X AKL 2">X AKL 2</option>
+                        <option value="XI AKL 1">XI AKL 1</option>
+                        <option value="XI AKL 2">XI AKL 2</option>
+                        <option value="XI AKL 3">XI AKL 3</option>
+                        <option value="XII AKL 1">XII AKL 1</option>
+                        <option value="XII AKL 2">XII AKL 2</option>
+                    </optgroup>
+
+                    <optgroup label="PMS">
+                        <option value="X PMS 1">X PMS 1</option>
+                        <option value="X PMS 2">X PMS 2</option>
+                        <option value="XI PMS 1">XI PMS 1</option>
+                        <option value="XI PMS 2">XI PMS 2</option>
+                        <option value="XII PMS 1">XII PMS 1</option>
+                        <option value="XII PMS 2">XII PMS 2</option>
+                    </optgroup>
+
+                    <optgroup label="MPLB">
+                        <option value="X MPLB 1">X MPLB 1</option>
+                        <option value="X MPLB 2">X MPLB 2</option>
+                        <option value="XI MPLB 1">XI MPLB 1</option>
+                        <option value="XI MPLB 2">XI MPLB 2</option>
+                        <option value="XII MPLB 1">XII MPLB 1</option>
+                        <option value="XII MPLB 2">XII MPLB 2</option>
+                    </optgroup>
+
+                </select>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Cari nama atau NIS" />
+            </div>
+        </div>
+
+        <!-- Tabel -->
+        <table id="dataTable" aria-describedby="Daftar 60 siswa">
+            <thead>
+                <tr>
+                    <th style="width:48px">No</th>
+                    <th>Nama Siswa</th>
+                    <th style="width:90px">NIS</th>
+                    <th style="width:150px">Kelas</th>
+                    <th style="width:120px">Saldo</th>
+                    <th style="width:110px">Status Akun</th>
+                    <th style="width:120px">Transaksi Akhir</th>
+                    <th style="width:110px">Aksi</th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>Arga Permana</td>
+                <td>17501</td>
+                <td>XI PPLG 2</td>
+                <td>Rp.1.200.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-14</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Ragista Pratiwi</td>
+                <td>17515</td>
+                <td>XI PPLG 2</td>
+                <td>Rp.8.888.888</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-10</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Daffa Mahendra</td>
+                <td>17630</td>
+                <td>XI DKV 1</td>
+                <td>Rp.740.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-11</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Vina Amalia</td>
+                <td>17648</td>
+                <td>X PMS 1</td>
+                <td>Rp.920.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-07</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Bagas Fadhil</td>
+                <td>17652</td>
+                <td>XII PPLG 1</td>
+                <td>Rp.1.050.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-13</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Laras Sekar Arum</td>
+                <td>17660</td>
+                <td>X MPLB 3</td>
+                <td>Rp.560.000</td>
+                <td><span class="status nonaktif">Nonaktif</span></td>
+                <td>2025-10-03</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>Rizky Januar</td>
+                <td>17671</td>
+                <td>XI PMS 3</td>
+                <td>Rp.480.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-05</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Melati Ayuningtyas</td>
+                <td>17682</td>
+                <td>XII DKV 2</td>
+                <td>Rp.980.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-09</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td>Ikram Setiawan</td>
+                <td>17695</td>
+                <td>XI AKL 4</td>
+                <td>Rp.700.000</td>
+                <td><span class="status nonaktif">Nonaktif</span></td>
+                <td>2025-10-02</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td>Putri Ayu Melinda</td>
+                <td>17701</td>
+                <td>XII PPLG 2</td>
+                <td>Rp.1.170.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-14</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>11.</td>
+                <td>Dimas Febrianto</td>
+                <td>17709</td>
+                <td>XI MPLB 1</td>
+                <td>Rp.830.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-08</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>12.</td>
+                <td>Siti Nurhaliza</td>
+                <td>17718</td>
+                <td>X AKL 1</td>
+                <td>Rp.640.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-06</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>13.</td>
+                <td>Revan Dwi Santoso</td>
+                <td>17727</td>
+                <td>XI DKV 3</td>
+                <td>Rp.1.210.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-12</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>14.</td>
+                <td>Shafa Nadhira</td>
+                <td>17735</td>
+                <td>X PMS 2</td>
+                <td>Rp.500.000</td>
+                <td><span class="status nonaktif">Nonaktif</span></td>
+                <td>2025-10-04</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>15.</td>
+                <td>Farhan Ramadhan</td>
+                <td>17741</td>
+                <td>XI PPLG 1</td>
+                <td>Rp.940.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-10</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>16.</td>
+                <td>Aura Khairunnisa</td>
+                <td>17755</td>
+                <td>XII MPLB 3</td>
+                <td>Rp.720.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-09</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>17.</td>
+                <td>Rania Zulfah</td>
+                <td>17762</td>
+                <td>XII DKV 1</td>
+                <td>Rp.910.000</td>
+                <td><span class="status nonaktif">Nonaktif</span></td>
+                <td>2025-10-05</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>18.</td>
+                <td>Yoga Firmansyah</td>
+                <td>17770</td>
+                <td>X MPLB 1</td>
+                <td>Rp.830.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-08</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>19.</td>
+                <td>Luthfiana Tsany</td>
+                <td>17778</td>
+                <td>XII PMS 3</td>
+                <td>Rp.1.300.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-11</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>20.</td>
+                <td>Amelia Zahra</td>
+                <td>17782</td>
+                <td>X AKL 2</td>
+                <td>Rp.620.000</td>
+                <td><span class="status nonaktif">Nonaktif</span></td>
+                <td>2025-10-02</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>21.</td>
+                <td>Rayhan Yusuf</td>
+                <td>17790</td>
+                <td>XI DKV 2</td>
+                <td>Rp.1.120.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-13</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>22.</td>
+                <td>Indah Nabila</td>
+                <td>17802</td>
+                <td>XI AKL 3</td>
+                <td>Rp.970.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-10</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>23.</td>
+                <td>Hafidz Maulana</td>
+                <td>17810</td>
+                <td>X PMS 3</td>
+                <td>Rp.810.000</td>
+                <td><span class="status nonaktif">Nonaktif</span></td>
+                <td>2025-10-04</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>24.</td>
+                <td>Desswita Khanza Ghazany</td>
+                <td>17819</td>
+                <td>XII AKL 4</td>
+                <td>Rp.1.250.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-12</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>25.</td>
+                <td>Yudha Saputra</td>
+                <td>17825</td>
+                <td>XII PPLG 1</td>
+                <td>Rp.560.000</td>
+                <td><span class="status nonaktif">Nonaktif</span></td>
+                <td>2025-10-05</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>26.</td>
+                <td>Dea Anggraini</td>
+                <td>17833</td>
+                <td>XII MPLB 2</td>
+                <td>Rp.900.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-08</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>27.</td>
+                <td>Alvaro Dimas Pratama</td>
+                <td>17840</td>
+                <td>XII DKV 2</td>
+                <td>Rp.640.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-09</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>28.</td>
+                <td>Laras Sasmita</td>
+                <td>17850</td>
+                <td>XI AKL 1</td>
+                <td>Rp.720.000</td>
+                <td><span class="status nonaktif">Nonaktif</span></td>
+                <td>2025-10-06</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>29.</td>
+                <td>Faiz Azzam</td>
+                <td>17859</td>
+                <td>XII PMS 1</td>
+                <td>Rp.1.010.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-13</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+            <tr>
+                <td>30.</td>
+                <td>Nadya Prameswari</td>
+                <td>17867</td>
+                <td>XI MPLB 2</td>
+                <td>Rp.870.000</td>
+                <td><span class="status aktif">Aktif</span></td>
+                <td>2025-10-11</td>
+                <td><button class="edit">Edit</button><button class="hapus">Hapus</button></td>
+            </tr>
+        </tbody>
+
+        </table>
+    </div>
+    <script src="kelolaf.js"></script>
+</body>
+
+</html>

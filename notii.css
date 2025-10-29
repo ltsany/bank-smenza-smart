@@ -1,0 +1,118 @@
+ body {
+     font-family: "Poppins", sans-serif;
+     background-color: #f5f7fa;
+     margin: 0;
+     padding: 40px;
+     color: #333;
+ }
+
+ h1 {
+     color: #0b348c;
+     font-size: 26px;
+     margin-bottom: 10px;
+ }
+
+ h2 {
+     color: #222;
+     font-size: 18px;
+     margin-top: 30px;
+     margin-bottom: 12px;
+ }
+
+ .notif-card {
+     border: 1px solid #dbe2f0;
+     border-radius: 12px;
+     background-color: #fff;
+     margin-bottom: 18px;
+     overflow: hidden;
+     box-shadow: 0 2px 5px rgba(11, 52, 140, 0.08);
+ }
+
+ .notif-header {
+     background-color: #0b348c;
+     color: #fff;
+     padding: 8px 16px;
+     font-weight: 600;
+     font-size: 14px;
+ }
+
+ .notif-headerpesan {
+    background-color: #fc4a13;
+    color: #fff;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+ }
+
+ .notif-body {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 14px 16px;
+     flex-wrap: wrap;
+ }
+
+ .notif-info {
+     font-size: 14px;
+     line-height: 1.5;
+     color: #333;
+ }
+
+ .notif-info span {
+     display: block;
+ }
+
+ .photo-box {
+     width: 60px;
+     height: 60px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 13px;
+     background-color: #fafafa;
+     margin-right: 15px;
+ }
+
+ .notif-content {
+     display: flex;
+     align-items: center;
+     gap: 16px;
+     flex: 1;
+     min-width: 250px;
+ }
+
+ .btn-accept {
+     background-color: #f59e0b;
+     color: white;
+     font-weight: 600;
+     border: none;
+     border-radius: 8px;
+     padding: 6px 16px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+ }
+
+ .btn-accept:hover {
+     background-color: #d97706;
+ }
+
+ /* Responsive */
+ @media (max-width: 700px) {
+     .notif-body {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 10px;
+     }
+
+     .notif-content {
+         flex-direction: row;
+         align-items: flex-start;
+         width: 100%;
+     }
+
+     .btn-accept {
+         align-self: flex-end;
+     }
+           }

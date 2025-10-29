@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up | Bank Smenza Smart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="topup.css">
+</head>
+
+<body>
+
+    <!-- KIRI -->
+    <div class="left-card">
+        <h1>Top Up</h1>
+        <form onsubmit="event.preventDefault(); kirimTopup();">
+            <label>Nama</label>
+            <input id="nama" type="text" placeholder="Masukkan nama">
+
+            <label>Kelas</label>
+            <input id="kelas" type="text" placeholder="Masukkan kelas">
+
+            <label>Tanggal</label>
+            <input id="tanggal" type="date">
+
+            <label>Nominal</label>
+            <input id="nominal" type="number" placeholder="Masukkan nominal">
+
+            <button type="submit" class="send-btn">Kirim</button>
+
+            <label class="upload-btn">
+                <input type="file" hidden>
+                📷 Upload Bukti
+            </label>
+        </form>
+    </div>
+
+    <!-- KANAN -->
+    <div class="right-card">
+        <h2>Scan untuk Top Up</h2>
+        <div class="qr-box">
+            <img src="img/Memproses.jpeg" alt="QRIS">
+        </div>
+        <p>Gunakan aplikasi keuangan Anda untuk memindai kode QR ini.</p>
+    </div>
+</body>
+
+</html>

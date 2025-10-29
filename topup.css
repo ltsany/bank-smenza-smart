@@ -1,0 +1,144 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* LEFT FORM */
+.left-card {
+    flex: 1;
+    min-width: 340px;
+    background: #0b348c;
+    color: white;
+    border-radius: 14px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.left-card h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #facc15;
+    background-color: #fff;
+    color: #111;
+}
+
+.send-btn {
+    background: #facc15;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.25s;
+}
+
+.send-btn:hover {
+    background: #eab308;
+    transform: translateY(-2px);
+}
+
+.upload-btn {
+    background: white;
+    color: #0b348c;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.upload-btn:hover {
+    background: #f2f2f2;
+}
+
+/* RIGHT CARD */
+.right-card {
+    flex: 1;
+    min-width: 340px;
+    background: white;
+    border-radius: 14px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.right-card h2 {
+    color: #0b348c;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.qr-box {
+    background: #f8fafc;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.qr-box img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+}
+
+.right-card p {
+    color: #444;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+}

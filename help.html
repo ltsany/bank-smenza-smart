@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bantuan | Bank Smenza Smart</title>
+
+    <!-- Poppins + FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="helpsty.css">
+</head>
+
+<body>
+    <main class="page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Bantuan</h1>
+                <p class="lead">Temukan panduan cepat dan solusi umum. Jika masih butuh bantuan, kirim pesan lewat
+                    formulir di samping.</p>
+            </header>
+
+            <section class="help-area">
+                <!-- Grid dua kolom -->
+                <div class="cards">
+                    <article class="card">
+                        <div class="icon"><i class="fa-solid fa-wallet"></i></div>
+                        <h3>Bagaimana Cara Top Up?</h3>
+                        <p>Login → pilih <strong>Top Up</strong> → isi data & unggah bukti → konfirmasi admin. Gunakan
+                            QRIS atau transfer bank.</p>
+                        <ol class="steps">
+                            <li>Login ke akunmu</li>
+                            <li>Pilih menu <em>Top Up</em></li>
+                            <li>Isi nominal & unggah bukti</li>
+                            <li>Tunggu verifikasi admin</li>
+                        </ol>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <h3>Kenapa Top Up Gagal?</h3>
+                        <p>Beberapa penyebab umum: saldo pengirim kurang, koneksi tidak stabil, atau bukti pembayaran
+                            tidak valid.</p>
+                        <ul class="reasons">
+                            <li>Saldo rekening utama tidak mencukupi</li>
+                            <li>File bukti tidak terbaca / format salah</li>
+                            <li>Sistem sedang maintenance</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon"><i class="fa-solid fa-wallet-money"></i></div>
+                        <h3>Bagaimana Cek Saldo?</h3>
+                        <p>Login → pilih <strong>MySaving</strong> atau menu <strong>Cek Saldo</strong>. Saldo dan
+                            riwayat transaksi akan tampil real-time.</p>
+                        <p class="note">Jika ada selisih, hubungi admin agar dilakukan klarifikasi.</p>
+                    </article>
+
+                    <article class="card contact-card">
+                        <div class="icon contact"><i class="fa-solid fa-phone"></i></div>
+                        <h3>Kontak & Kirim Pesan</h3>
+                        <p>Untuk masalah khusus, tulis pesanmu di form — admin akan merespon via email / telepon.</p>
+
+                        <!-- form kecil -->
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <label for="nama">Nama</label>
+                            <input id="nama" name="nama" type="text" placeholder="Nama lengkap" required>
+
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="email@contoh.com" required>
+
+                            <label for="pesan">Pesan</label>
+                            <textarea id="pesan" name="pesan" rows="4"
+                                placeholder="Tuliskan masalah atau pertanyaan singkat" required></textarea>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn primary">Kirim Pesan</button>
+                            </div>
+
+                            <p id="formFeedback" class="feedback" aria-live="polite"></p>
+                        </form>
+
+                        <div class="contact-info">
+                            <p><strong>Email:</strong> bankSmenzaSmart@gmail.com</p>
+                            <p><strong>Telp:</strong> 0834-xxxx-xxxx (Admin)</p>
+                            <p><strong>Jam Operasional:</strong> Senin–Jumat 08.00–15.00 WIB</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="page-footer">
+                <small>© 2025 <strong>Bank Smenza Smart</strong> | All Rights Reserved</small>
+            </footer>
+        </div>
+    </main>
+   <script src="helpp.js"></script>
+</body>
+
+</html>

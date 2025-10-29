@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Smenza Smart | Admin</title>
+    <link rel="stylesheet" href="dashadsty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+     <img src="img/BSS (1).svg" alt="Logo Bank Smenza Smart" class="logo">
+        <div class="nav-links">
+            <a href="dashad.html">Beranda</a>
+            <a href="tentanlo.html">Tentang</a>
+            <a href="noti.html" class="notif-icon">
+                <i class="fas fa-bell"></i>
+                <span class="notif-badge">3</span> 
+            </a>
+            <a href="index.html" class="logout-btn">LOGOUT</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <h1 class="fade-in fade-delay-1">Selamat datang di <br><span>Bank Smenza Smart!</span></h1>
+        <p class="fade-in fade-delay-2">
+            Pengelolaan data, administrasi, keuangan, dan sebagainya <br> hanya dikelola oleh Admin.
+        </p>
+
+        <div class="search-bar fade-in fade-delay-3">
+            <input type="text" placeholder="Ketik sesuatu">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="cards fade-in fade-delay-3">
+            <div class="card fade-in fade-delay-2">
+                <h3>Kelola Akun Siswa</h3>
+                <p>Pantau dan atur data tabungan siswa dengan mudah. Admin dapat menambah, mengedit, atau memperbarui
+                    saldo siswa.</p>
+                <a href="kelolaas.html" class="card-btn">Buka</a>
+            </div>
+
+            <div class="card fade-in fade-delay-3">
+                <h3>Laporan</h3>
+                <p>Unduh atau lihat laporan keuangan harian dan bulanan dengan cepat. Dapatkan rekap data transaksi
+                    untuk keperluan administrasi sekolah.</p>
+                <a href="lapo.html" class="card-btn">Buka</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Bank Smenza Smart | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+
+</html>
