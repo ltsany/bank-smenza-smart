@@ -49,23 +49,7 @@ document.querySelectorAll('.feature-btn').forEach(button => {
         setTimeout(() => {
             this.style.transform = 'scale(1)';
         }, 150);
-
-        // Simulasi aksi buka fitur
-        console.log(`Membuka fitur: ${featureName}`);
-        alert(`Fitur "${featureName}" akan dibuka!`);
     });
-});
-
-// Optional: Navigation effect saat scroll
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 100) {
-        nav.style.background = 'rgba(255, 255, 255, 0.15)';
-        nav.style.backdropFilter = 'blur(15px)';
-    } else {
-        nav.style.background = 'rgba(255, 255, 255, 0.1)';
-        nav.style.backdropFilter = 'blur(10px)';
-    }
 });
 
 // Loading animation
