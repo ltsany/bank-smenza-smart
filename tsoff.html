@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Transaksi Offline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tsoff.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Transaksi Offline</h2>
+
+        <form id="transaksiForm">
+            <div>
+                <label>Nama Siswa</label>
+                <input type="text" id="nama" placeholder="Masukkan nama siswa" required>
+            </div>
+            <div>
+                <label>NIS</label>
+                <input type="text" id="nis" placeholder="Masukkan NIS" required>
+            </div>
+            <div>
+                <label>Tanggal</label>
+                <input type="date" id="tanggal" required>
+            </div>
+            <div>
+                <label>Jenis Transaksi</label>
+                <select id="jenis" required>
+                    <option value=""> Pilih Jenis </option>
+                    <option value="Top Up">Top Up</option>
+                    <option value="Tarik Tunai">Tarik Tunai</option>
+                </select>
+            </div>
+            <div>
+                <label>Jumlah (Rp)</label>
+                <input type="number" id="jumlah" placeholder="Masukkan jumlah" required min="0">
+            </div>
+            <div>
+                <label>Tabungan Bulan</label>
+                <select id="bulan" required>
+                    <option value="" disabled selected>Pilih Bulan</option>
+                    <option value="Januari">Januari</option>
+                    <option value="Februari">Februari</option>
+                    <option value="Maret">Maret</option>
+                    <option value="April">April</option>
+                    <option value="Mei">Mei</option>
+                    <option value="Juni">Juni</option>
+                    <option value="Juli">Juli</option>
+                    <option value="Agustus">Agustus</option>
+                    <option value="September">September</option>
+                    <option value="Oktober">Oktober</option>
+                    <option value="November">November</option>
+                    <option value="Desember">Desember</option>
+                </select>
+            </div>
+            <div>
+                <label>Keterangan</label>
+                <select id="keterangan" required>
+                    <option value=""> Keterangan </option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="Teller">Teller</option>
+                </select>
+            </div>
+            <button type="submit">+ Tambah Transaksi</button>
+        </form>
+
+        <table id="tabelTransaksi">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NIS</th>
+                    <th>Tanggal</th>
+                    <th>Jenis</th>
+                    <th>Jumlah (Rp)</th>
+                    <th>Bulan</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="tsoff.js"></script>
+</body>
+
+</html>
