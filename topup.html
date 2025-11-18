@@ -5,45 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Up | Bank Smenza Smart</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="topup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="topup.css">
 </head>
 
 <body>
 
-    <!-- KIRI -->
-    <div class="left-card">
-        <h1>Top Up</h1>
-        <form onsubmit="event.preventDefault(); kirimTopup();">
-            <label>Nama</label>
-            <input id="nama" type="text" placeholder="Masukkan nama">
+    <div class="container">
+        <div class="left-card">
+            <h1>Top Up Saldo</h1>
+            <form onsubmit="event.preventDefault(); kirimTopup();">
 
-            <label>Kelas</label>
-            <input id="kelas" type="text" placeholder="Masukkan kelas">
+                <label for="inputNama">Nama Lengkap</label>
+                <input id="inputNama" type="text" placeholder="Masukkan nama Anda" required>
 
-            <label>Tanggal</label>
-            <input id="tanggal" type="date">
+                <label for="inputKelas">Kelas</label>
+                <input id="inputKelas" type="text" placeholder="Masukkan Kelas" required>
 
-            <label>Nominal</label>
-            <input id="nominal" type="number" placeholder="Masukkan nominal">
+                <label for="inputTanggal">Tanggal Transaksi</label>
+                <input id="inputTanggal" type="date" value="2025-11-18" required>
 
-            <button type="submit" class="send-btn">Kirim</button>
+                <label for="inputNominal">Nominal Top Up (Rp)</label>
+                <input id="inputNominal" type="text" placeholder="Masukkan Nominal" min="1000" inputmode="numeric"
+                    required>
 
-            <label class="upload-btn">
-                <input type="file" hidden>
-                📷 Upload Bukti
-            </label>
-        </form>
-    </div>
+                <label for="selectBulan">Untuk Pembayaran Bulan</label>
+                <select id="selectBulan" required>
+                    <option value="" disabled selected>Pilih Bulan</option>
+                    <option value="Januari">Januari</option>
+                    <option value="Februari">Februari</option>
+                    <option value="Maret">Maret</option>
+                    <option value="April">April</option>
+                    <option value="Mei">Mei</option>
+                    <option value="Juni">Juni</option>
+                    <option value="Juli">Juli</option>
+                    <option value="Agustus">Agustus</option>
+                    <option value="September">September</option>
+                    <option value="Oktober">Oktober</option>
+                    <option value="November">November</option>
+                    <option value="Desember">Desember</option>
+                </select>
 
-    <!-- KANAN -->
-    <div class="right-card">
-        <h2>Scan untuk Top Up</h2>
-        <div class="qr-box">
-            <img src="img/Memproses.jpeg" alt="QRIS">
+                <button type="submit" class="send-btn">Kirim Permintaan Top Up</button>
+
+                <label class="upload-btn">
+                    <input id="inputBukti" type="file" accept="image/*" hidden>
+                     Upload Bukti Transfer
+                </label>
+                <span id="file-name" style="font-size: 12px; margin-top: -10px; color: #facc15;">Belum ada file yang
+                    dipilih.</span>
+
+            </form>
         </div>
-        <p>Gunakan aplikasi keuangan Anda untuk memindai kode QR ini.</p>
+
+        <div class="right-card">
+            <h2>Scan & Bayar</h2>
+            <p class="subtitle">Silakan transfer nominal yang diinginkan dengan memindai kode QRIS di bawah ini.</p>
+            <div class="qr-box">
+                <img src="img/Memproses.jpeg" alt="Kode QRIS untuk Pembayaran Top Up Bank Smenza Smart" loading="lazy">
+            </div>
+            <p>Gunakan aplikasi perbankan atau dompet digital Anda (seperti GoPay, OVO, DANA, dll.) untuk memindai kode
+                QR ini.</p>
+            <p class="warning-text"><strong>Penting:</strong> Setelah transfer, isi formulir di sebelah kiri dan upload bukti
+                transfer Anda.</p>
+        </div>
     </div>
+
+    <script>
+        const fileInput = document.getElementById('inputBukti');
+        const fileNameDisplay = document.getElementById('file-name');
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                fileNameDisplay.textContent = `File dipilih: ${fileInput.files[0].name}`;
+            } else {
+                fileNameDisplay.textContent = 'Belum ada file yang dipilih.';
+            }
+        });
+    </script>
 </body>
 
 </html>
