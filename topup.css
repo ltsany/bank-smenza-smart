@@ -1,144 +1,234 @@
+:root {
+    --color-primary: #0a338d;
+    /* Biru Bank Smenza Smart */
+    --color-secondary: #facc15;
+    /* Kuning Aksen */
+    --color-text-dark: #333;
+    --color-text-light: #f5f7fa;
+    --shadow-primary: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-secondary: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background: #f5f7fa;
     margin: 0;
-    padding: 50px 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
+    padding: 50px 40px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 /* LEFT FORM */
 .left-card {
     flex: 1;
-    min-width: 340px;
-    background: #0b348c;
+    min-width: 320px;
+    max-width: 500px;
+    background: var(--color-primary);
     color: white;
     border-radius: 14px;
     padding: 30px 40px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-primary);
+    animation: fadeIn 0.8s ease-out;
 }
 
 .left-card h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 8px;
+    display: inline-block;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
 }
 
 label {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.85rem;
+    margin-top: 5px;
 }
 
 input[type="text"],
 input[type="date"],
-input[type="number"] {
-    padding: 10px 12px;
+input[type="number"],
+#selectBulan {
+    padding: 12px 14px;
     border-radius: 8px;
-    border: none;
-    font-size: 14px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 
-input:focus {
-    outline: 2px solid #facc15;
+#selectBulan {
+    color: #555;
+    background-color: white;
+}
+
+#selectBulan option:first-child {
+    color: #999;
+}
+
+
+input:focus,
+#selectBulan:focus {
+    outline: 2px solid var(--color-secondary);
     background-color: #fff;
-    color: #111;
+    color: var(--color-text-dark);
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 5px rgba(250, 204, 21, 0.5);
 }
 
 .send-btn {
-    background: #facc15;
+    background: var(--color-secondary);
     border: none;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
-    color: #111;
-    font-weight: 600;
+    color: var(--color-primary);
+    font-weight: 700;
     cursor: pointer;
-    margin-top: 10px;
-    transition: 0.25s;
+    margin-top: 15px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .send-btn:hover {
     background: #eab308;
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .upload-btn {
     background: white;
-    color: #0b348c;
-    padding: 10px;
+    color: var(--color-primary);
+    padding: 12px;
     border-radius: 8px;
     text-align: center;
-    display: inline-block;
+    display: block;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     transition: 0.25s;
+    margin-top: 5px;
 }
 
 .upload-btn:hover {
-    background: #f2f2f2;
+    background: #e9e9e9;
 }
 
 /* RIGHT CARD */
 .right-card {
     flex: 1;
-    min-width: 340px;
+    min-width: 320px;
+    max-width: 400px;
     background: white;
     border-radius: 14px;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-secondary);
+    animation: fadeIn 0.8s ease-out 0.2s backwards;
 }
 
 .right-card h2 {
-    color: #0b348c;
-    font-size: 22px;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #666;
     margin-bottom: 20px;
 }
 
 .qr-box {
     background: #f8fafc;
     border: 1px solid #ddd;
-    border-radius: 12px;
+    border-radius: 16px;
     display: inline-block;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
 }
 
 .qr-box img {
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
+    border-radius: 8px;
 }
 
 .right-card p {
     color: #444;
-    font-size: 13px;
-    margin-top: 15px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.warning-text {
+    font-weight: 600;
+    color: #d9534f;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fce8e8;
+    border-radius: 6px;
+    border-left: 4px solid #d9534f;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0.9);
+        transform: translateY(10px);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 800px) {
-    body {
+@media (max-width: 900px) {
+    .container {
         flex-direction: column;
         align-items: center;
-        padding: 30px;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .left-card,
+    .right-card {
+        max-width: 100%;
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .left-card {
+        padding: 20px;
+    }
+
+    .qr-box img {
+        width: 180px;
+        height: 180px;
     }
 }
