@@ -1,55 +1,32 @@
-# NuswaRasa – Culinary E-Commerce Website
+# Bank Smenza Smart
 
-NuswaRasa is a simple culinary e-commerce website that showcases local food products from Kebumen, Indonesia.
+Bank Smenza Smart is a school banking website interface designed to provide a simple and modern digital experience for students to manage their school savings.
 
-The project focuses on building a simple and user-friendly shopping experience while introducing local culinary products through a digital platform.
+This project focuses on frontend development, UI/UX design, and responsive web interfaces.
 
 ---
 
 ## 📦 Tech Stack
 
-* **Frontend**: HTML, CSS, JavaScript
-* **Backend**: PHP
-* **Database**: MySQL
-* **Font**: Nunito
+* HTML
+* CSS
+* JavaScript
 
 ---
 
 ## ✨ Features
 
-* Product catalog
-* Product details
-* Shopping cart
-* Dynamic product data
+* Dashboard interface
+* Savings overview
+* Transaction history interface
+* Student account interface
 * Responsive design
-* MySQL database integration
 
 ---
 
-## 🗂 Project Structure
+## 🎨 Design
 
-```text
-nuswarasa/
-│
-├── assets/
-├── css/
-├── js/
-├── images/
-├── database/
-├── admin/
-├── index.php
-└── README.md
-```
-
----
-
-## ⚙️ Setup
-
-Clone the repository:
-
-```bash
-git clone https://github.com/ltsany/nuswarasa.git
-```
+The interface uses a clean and modern visual style with a blue and yellow color palette to create a friendly and trustworthy banking experience.
 
 ---
 
@@ -57,24 +34,21 @@ git clone https://github.com/ltsany/nuswarasa.git
 
 This project was created to practice:
 
-* PHP & MySQL development
-* Database integration
-* E-commerce functionality
+* Frontend development
 * UI/UX design
-* Web development
-
-It also aims to digitally showcase local culinary products from Indonesia.
+* Responsive web design
+* Interactive web interfaces
 
 ---
 
 ## 📝 Notes
 
-NuswaRasa is an academic project and is still open for further improvements.
+Bank Smenza Smart is a frontend-only academic project. The data displayed in the interface is static and is not connected to a backend or database.
 
 ---
 
 ## 👨‍💻 Author
 
-**Lutfysany17@gmailcom**
+Gmail: [lutfysany17@gmail.com]
 
 GitHub: [@ltsany](https://github.com/ltsany)
